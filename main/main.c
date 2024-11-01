@@ -28,7 +28,7 @@ int map_value(int n) {
 
 void potenciometro_task_1() {
     while(1) {
-        int pot_value;
+        int pot_value = 0;
         if (xSemaphoreTake(xAdcSemaphore, portMAX_DELAY)) {
             adc_select_input(0); 
             pot_value = adc_read();
@@ -43,7 +43,7 @@ void potenciometro_task_1() {
 
 void potenciometro_task_2() {
     while(1) {
-        int pot_value;
+        int pot_value = 0;
         if (xSemaphoreTake(xAdcSemaphore, portMAX_DELAY)) {
             adc_select_input(1);  
             pot_value = adc_read();
