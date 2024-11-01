@@ -10,8 +10,6 @@
 #include "hardware/pwm.h"
 
 volatile bool direction = true;
-volatile int currentMillis1 = 400;
-volatile int currentMillis2 = 400;
 volatile int servoPin = 16; 
 volatile int servoPin2 = 17;
 
@@ -59,6 +57,7 @@ void potenciometro_task_2() {
 }
 
 void servo_task_1() {
+    int currentMillis1 = 400;
     setServo(servoPin, currentMillis1);
     int pot_value;
 
@@ -73,6 +72,7 @@ void servo_task_1() {
 }
 
 void servo_task_2() {
+    int currentMillis2 = 400;
     setServo(servoPin2, currentMillis2);
     int pot_value;
 
