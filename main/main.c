@@ -9,11 +9,11 @@
 #include <queue.h>
 #include "hardware/pwm.h"
 
-bool direction = true;
-int currentMillis1 = 400;
-int currentMillis2 = 400;
-int servoPin = 16; 
-int servoPin2 = 17;
+volatile bool direction = true;
+volatile int currentMillis1 = 400;
+volatile int currentMillis2 = 400;
+volatile int servoPin = 16; 
+volatile int servoPin2 = 17;
 
 QueueHandle_t xQueuePot;
 QueueHandle_t xQueuePot2;
